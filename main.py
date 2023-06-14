@@ -154,7 +154,7 @@ def register():
         new_user = User(
             email=form.email.data,
             name=form.name.data,
-            password=generate_password_hash(password=form.password.data, method="pbkdf2", salt_length=8)
+            password=generate_password_hash(password=form.password.data, salt_length=8)
             # password=form.password.data
         )
         db.session.add(new_user)
